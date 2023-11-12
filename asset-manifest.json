@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/IoT_FE/static/css/main.dde56297.css",
+    "main.js": "/IoT_FE/static/js/main.a7462dac.js",
+    "static/js/787.9ede63d8.chunk.js": "/IoT_FE/static/js/787.9ede63d8.chunk.js",
+    "static/media/hell_bound_fan_by_damikel-dauk9ee.png": "/IoT_FE/static/media/hell_bound_fan_by_damikel-dauk9ee.84c58e322dc7a250554c.png",
+    "static/media/turnon.png": "/IoT_FE/static/media/turnon.39e3c489d6ae9c15a78d.png",
+    "static/media/turnoff.png": "/IoT_FE/static/media/turnoff.5fcbab2858901fe61f87.png",
+    "index.html": "/IoT_FE/index.html",
+    "main.dde56297.css.map": "/IoT_FE/static/css/main.dde56297.css.map",
+    "main.a7462dac.js.map": "/IoT_FE/static/js/main.a7462dac.js.map",
+    "787.9ede63d8.chunk.js.map": "/IoT_FE/static/js/787.9ede63d8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dde56297.css",
+    "static/js/main.a7462dac.js"
+  ]
+}
