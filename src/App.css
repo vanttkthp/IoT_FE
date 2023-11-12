@@ -1,0 +1,330 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1d2634;
+  color: #9e9ea4;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.icon {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.icon_header {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 26px;
+}
+
+.icon,
+.icon_header {
+  margin-right: 5px;
+}
+
+.close_icon {
+  color: red;
+  margin-left: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas:
+    'sidebar header header header'
+    'sidebar main main main';
+  height: calc(100vh - 60px);
+}
+
+
+.header {
+  grid-area: header;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+  box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* End Header  */
+
+/* Sidebar  */
+#sidebar {
+  grid-area: sidebar;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(7px);
+
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+
+  color: rgb(255, 255, 255);
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px 0px 30px;
+  margin-bottom: 30px;
+
+}
+
+.sidebar-title>span {
+  display: none;
+}
+
+.sidebar-brand {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 700;
+
+}
+
+.sidebar-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar-list-item {
+  padding: 20px 20px 20px 20px;
+  font-size: 18px;
+
+}
+
+.sidebar-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.sidebar-list-item>a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.sidebar-responsive {
+  display: inline !important;
+  position: absolute;
+  /*
+    we want the z-index of the sidebar higher so that
+    the charts are not showing over the sidebar 
+    on small screens
+  */
+  z-index: 12 !important;
+}
+
+.card {
+  flex: 2;
+  /* Chiếm 2/3 chiều rộng */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 8px 15px;
+  color: rgb(255, 255, 255);
+
+
+}
+
+.card-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-inner>.card_icon {
+  font-size: 25px;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+
+}
+
+.button-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button_icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.card-height {
+  height: calc(100vh / 3);
+  /* Đặt chiều cao mong muốn (1/3 chiều cao viewport) */
+}
+
+.container-fluid {
+  padding: 20px;
+}
+
+
+/* custom.css */
+.card-custom {
+  height: 200px;
+  /* Điều chỉnh chiều cao theo ý muốn */
+}
+
+.card-square {
+
+  background-color: rgb(255, 255, 255);
+
+
+
+  color: black;
+}
+
+.card_icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.button_icon {
+  font-size: 36px;
+}
+
+.app-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.light-toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.light-bulb {
+  width: 100px;
+  height: 150px;
+  background-color: #f5f5f5;
+  border-radius: 50px 50px 10px 10px;
+  position: relative;
+}
+
+.light-bulb.on {
+  background-color: #ffec40;
+  box-shadow: 0px 0px 30px 10px #ffec40;
+}
+
+.bulb {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+.base {
+  width: 20px;
+  height: 10px;
+  background-color: #cccccc;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 10px;
+  left: 40px;
+}
+
+.toggle-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-label {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-label .toggle-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.toggle-input:checked+.slider {
+  background-color: #2196F3;
+}
+
+.toggle-input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.card-inner.on .button_icon {
+  color: #FFE53B;
+}
+
+.card-inner.off .button_icon {
+  color: rgb(0, 0, 0);
+}
+
+/* Khi temperature > 35 độ C */
+.high-temperature {
+  background-color: #FFE53B;
+  background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+}
+
+/* Khi humidity < 40 */
+.low-humidity {
+  background-color: #FFE53B;
+  background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+}
+
+/* Khi light > 50 */
+.high-light {
+  background-color: #FFE53B;
+  background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+}
+
+.low-light {
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+}
